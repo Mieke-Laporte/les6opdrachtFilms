@@ -1,0 +1,10 @@
+CREATE TABLE `films` (
+  `Title` varchar(255) NOT NULL,
+  `Year` int NOT NULL,
+  `Rating` int NOT NULL,
+  `Description` varchar(400) NOT NULL,
+  `IMDB` float DEFAULT NULL,
+  `Summary` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`Title`),
+  CONSTRAINT `films_chk_1` CHECK (((`Rating` >= 0) and (`Rating` <= 10)))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_cifilmsTitle
